@@ -1,0 +1,34 @@
+add express
+for reference can refer to notes: copy of nodejs and express lab lab6 or lab7
+
+
+in the terminal, type: 
+npm init
+yarn add express
+add index.js file
+add npm install -g nodemon
+add mongo: yarn add mongodb
+
+go to mongoatlas, go to our CLUSTERS and click connect.
+select connect with apllication. and copy the code.
+
+create a new file: .env
+in the file type: MONGO_URL=mongodb+srv://root:root123456@cluster0.5x5dr.mongodb.net/
+
+add: yarn add dotenv on the terminal
+go back index.js
+type: require('dotenv').config(); above const express.
+then we can add: const MONGO_URL=process.env.MONGO_URL;
+in gitignore, we need to exclude .env
+
+next we need to type: const client = require('mongodb').MongoClient;
+
+create a new file, and call it mongoUtil.js
+put all the mongo essential connecctions stuff in that .js file
+
+in the index.js file, add const express=require('express')
+
+template of the file formaat can be found on google classroom
+-mongoutil 
+and
+-boilerplate for index.js

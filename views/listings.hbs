@@ -1,0 +1,20 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+
+<h1>Listings</h1>
+
+    {{#each results }}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.address.street}}, {{this.address.country}}</p>
+        </div>
+    </div>
+    {{/each}}
+    
+
+
+{{/block}}
+
+
+{{/extends}}
